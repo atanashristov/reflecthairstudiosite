@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  body {
+    /* @apply bg-indigo-300; */
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-indigo-400 py-2 px-4 rounded-xl font-bold text-white hover:bg-indigo-500;
+  }
+
+  .primary {
+    @apply bg-indigo-300 text-indigo-800 font-semibold font-sans;
+  }
+
+  .center {
+    @apply flex flex-row justify-center items-center;
+  }
+
+  .row {
+    @apply pt-2 pb-2 md:pt-5 md:pb-5;
+  }
+
+  .topbar {
+    position: relative;
+    z-index: 2;
+  }
+
+  .bgimg {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bgimage.png');
+    background-position: 0px 50px;
+    background-size: cover;
+    color: white;
+  }
+
+  .comingsoon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 4rem;
+  }
+}
+
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body,
+html {
+  height: 100%;
+}
