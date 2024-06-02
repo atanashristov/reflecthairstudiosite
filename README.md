@@ -2,7 +2,14 @@
 
 ## Development
 
-To build the site run: `npm run build`
+To build the site run: `npm run build`, then serve for example with static-server:
+
+```bash
+npm -g install static-server
+static-server
+```
+
+, or with python `py -m http.server 8000` for example.
 
 To watch and build the site run: `npm run watch`
 
