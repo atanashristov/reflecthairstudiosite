@@ -17,6 +17,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('daisyui'),
     // Iconify plugin
     addDynamicIconSelectors(),
     plugin(function ({ matchUtilities, theme }) {
