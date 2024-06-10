@@ -1,74 +1,131 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <style>
-      /* Set height to 100% for body and html to enable the background image to cover the whole page: */
-      body,
-      html {
-        height: 100%;
-      }
-
-      .bgimg {
-        /* Background image */
-        background-image: url('./images/hairdresser-does-hairstyle-her-client.jpg');
-        /* Full-screen */
-        height: 100%;
-        /* Center the background image */
-        background-position: center;
-        /* Scale and zoom in the image */
-        background-size: cover;
-        /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-        position: relative;
-        /* Add a white text color to all elements inside the .bgimg container */
-        color: white;
-        /* Add a font */
-        font-family: 'Courier New', Courier, monospace;
-        /* Set the font-size to 25 pixels */
-        font-size: 25px;
-      }
-
-      /* Position text in the top-left corner */
-      .topleft {
-        position: absolute;
-        top: 0;
-        left: 16px;
-      }
-
-      /* Position text in the bottom-left corner */
-      .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
-      }
-
-      /* Position text in the middle */
-      .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      /* Style the <hr> element */
-      hr {
-        margin: auto;
-        width: 40%;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R|H: Reflect Hair Studio LLC</title>
+    <link href="./dist/output.css?1717979940255" rel="stylesheet" />
+    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', () => {
+            if (mobileMenuButton.classList.contains('open')) {
+              mobileMenuButton.classList.remove('open');
+            } else {
+              mobileMenuButton.classList.add('open');
+            }
+          });
+        }
+      };
+    </script>
   </head>
   <body>
-    <div class="bgimg">
-      <div class="topleft">
-        <!-- <p>Logo</p> -->
-      </div>
-      <div class="middle">
-        <h1>COMING SOON</h1>
-        <!-- <hr /> -->
-        <!-- <p>35 days</p> -->
-      </div>
-      <div class="bottomleft">
-        <p>www.reflecthairstudio.com</p>
-      </div>
-    </div>
+    <main>
+      <header class="text-zinc-200">
+        <nav
+          class="z-10 sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+        >
+          <div class="flex items-center gap-2 p-2">
+            <img
+              src="./assets/images/logo.svg"
+              alt="logo"
+              width="40"
+              class="filter-text-sky-800"
+            />
+            <div class="pl-2 text-3xl font-bold">
+              R|H<span class="pl-2 text-sky-800">Studio</span>
+            </div>
+          </div>
+          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+            <button id="mobile-menu-button" class="group peer">
+              <div
+                class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
+              ></div>
+              <div
+                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all group-open:opacity-0"
+              ></div>
+              <div
+                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
+              ></div>
+            </button>
+            <div
+              class="absolute top-14 left-0 hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
+            >
+              <div class="menu-item">
+                <span>Home</span>
+              </div>
+              <div class="menu-item">
+                <span>About</span>
+              </div>
+              <div class="menu-item">
+                <span>Services</span>
+              </div>
+              <div class="menu-item">
+                <span>Gallery</span>
+              </div>
+              <div class="menu-item">
+                <span>Contact</span>
+              </div>
+            </div>
+          </div>
+          <div class="hidden flex-1 items-center justify-end md:flex">
+            <div class="menu-item">
+              <span>Home</span>
+            </div>
+            <div class="menu-item">
+              <span>About</span>
+            </div>
+            <div class="menu-item">
+              <span>Services</span>
+            </div>
+            <div class="menu-item">
+              <span>Gallery</span>
+            </div>
+            <div class="menu-item">
+              <span>Contact</span>
+            </div>
+          </div>
+        </nav>
+        <div
+          style="background-image: url('./assets/images/hero.jpg')"
+          class="flex h-[calc(100vh-200px)] min-h-[400px] flex-col items-center justify-center bg-cover bg-fixed bg-right"
+        >
+          <div
+            class="rounded-xl bg-white/30 py-2 px-4 text-center backdrop-blur-md"
+          >
+            <div class="flex gap-2">
+              <!-- <img
+                src="./assets/images/logo.svg"
+                alt="logo"
+                width="40"
+                class="filter-text-sky-800"
+              />
+              <div class="text-5xl font-bold">
+                R|H<span class="pl-2 text-sky-800">Studio</span>
+              </div> -->
+              <div class="text-2xl md:text-3xl font-bold text-sky-800">
+                Reflect Hair Studio LLC
+              </div>
+            </div>
+            <div class="text-lg mt-3 font-bold text-black">
+              <div>Working hours:</div>
+              <div class="pt-2">Mon-Fri: 9am - 9:30pm</div>
+              <div>Sat: 9am - 7:30pm</div>
+            </div>
+          </div>
+          <form class="mt-3 flex gap-2">
+            <button
+              type="submit"
+              class="text-lg md:text-xl cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+            >
+              Book Appointment Now
+            </button>
+          </form>
+        </div>
+      </header>
+    </main>
   </body>
 </html>
