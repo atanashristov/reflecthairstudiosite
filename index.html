@@ -26,7 +26,7 @@
       content="R|H: Reflect Hair Studio LLC"
     />
     <meta name="robots" content="index, follow" />
-    <link href="./dist/output.css?1718578870992" rel="stylesheet" />
+    <link href="./dist/output.css?1719097408429" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
     <script>
@@ -67,101 +67,238 @@
     </script>
   </head>
   <body class="bg-zinc-200">
-    <main id="home">
-      <header class="text-zinc-200">
-        <nav
-          class="z-10 sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
-        >
-          <div class="flex items-center gap-2 p-2">
-            <img
-              src="./assets/images/logo.svg"
-              alt="logo"
-              width="40"
-              class="filter-text-sky-800"
-            />
-            <div class="pl-2 text-3xl font-bold">
-              R|H<span class="pl-2 text-sky-800">Studio</span>
-            </div>
-          </div>
-          <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
-            <button id="mobile-menu-button" class="group peer">
-              <div
-                class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
-              ></div>
-              <div
-                class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all group-open:opacity-0"
-              ></div>
-              <div
-                class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
-              ></div>
-            </button>
-            <div
-              class="absolute top-14 left-0 hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
-            >
-              <div class="menu-item">
-                <span><a href="#home">Home</a></span>
-              </div>
-              <div class="menu-item">
-                <span><a href="#services">Services</a></span>
-              </div>
-              <div class="menu-item">
-                <span><a href="#gallery">Gallery</a></span>
-              </div>
-            </div>
-          </div>
-          <div class="hidden flex-1 items-center justify-end md:flex">
-            <div class="menu-item">
-              <span><a href="#home">Home</a></span>
-            </div>
-            <div class="menu-item">
-              <span><a href="#services">Services</a></span>
-            </div>
-            <div class="menu-item">
-              <span><a href="#gallery">Gallery</a></span>
-            </div>
-          </div>
-        </nav>
-        <div
-          style="background-image: url('./assets/images/hero.jpg')"
-          class="flex h-[calc(100vh-200px)] min-h-[400px] flex-col items-center justify-center bg-cover bg-right-bottom"
-        >
-          <div
-            class="rounded-xl bg-white/30 py-2 px-4 text-center backdrop-blur-md"
-          >
-            <div class="flex gap-2">
-              <div class="text-2xl md:text-3xl font-bold text-sky-800">
-                Reflect Hair Studio LLC
-              </div>
-            </div>
-            <div class="text-lg mt-3 font-bold text-black">
-              <div>Working hours:</div>
-              <div class="pt-2">Mon-Fri: 9am - 9:30pm</div>
-              <div>Sat: 9am - 7:30pm</div>
-            </div>
-          </div>
-          <form class="mt-3 flex gap-2">
-            <button
-              type="submit"
-              class="text-lg md:text-xl cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
-            >
-              Book Appointment Now
-            </button>
-          </form>
+    <div class="hidden" is="top"></div>
+    <nav
+      class="z-10 sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+    >
+      <div class="flex items-center gap-2 p-2">
+        <img
+          src="./assets/images/logo.svg"
+          alt="logo"
+          width="40"
+          class="filter-text-sky-800"
+        />
+        <div class="pl-2 text-3xl font-bold">
+          R|H<span class="pl-2 text-sky-800">Studio</span>
         </div>
-      </header>
+      </div>
+      <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+        <button id="mobile-menu-button" class="group peer">
+          <div
+            class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
+          ></div>
+          <div
+            class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all group-open:opacity-0"
+          ></div>
+          <div
+            class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
+          ></div>
+        </button>
+        <div
+          class="absolute top-14 left-0 hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
+        >
+          <div class="menu-item">
+            <span><a href="#top">Home</a></span>
+          </div>
+          <div class="menu-item">
+            <span><a href="#services">Services</a></span>
+          </div>
+          <div class="menu-item">
+            <span><a href="#gallery">Gallery</a></span>
+          </div>
+        </div>
+      </div>
+      <div class="hidden flex-1 items-center justify-end md:flex">
+        <div class="menu-item">
+          <span><a href="#top">Home</a></span>
+        </div>
+        <div class="menu-item">
+          <span><a href="#services">Services</a></span>
+        </div>
+        <div class="menu-item">
+          <span><a href="#gallery">Gallery</a></span>
+        </div>
+      </div>
+    </nav>
 
+    <header class="text-zinc-200">
       <div
-        class="mx-auto px-2 mt-14 max-w-screen-lg text-zinc-900 dark:text-zinc-200"
+        id="home"
+        class="bg-[url('../assets/images/hero.jpg')] flex h-[calc(100vh-300px)] md:h-[calc(100vh-200px)] min-h-[300px] flex-col items-center justify-center bg-no-repeat bg-cover bg-right bg-fixed"
       >
-        <h2 id="services" class="mt-14">
+        <div
+          class="rounded-xl bg-white/30 py-2 px-4 text-center backdrop-blur-md"
+        >
+          <div class="flex gap-2">
+            <div class="text-2xl md:text-3xl font-bold text-sky-800">
+              Reflect Hair Studio LLC
+            </div>
+          </div>
+          <div class="text-lg mt-3 font-bold text-black">
+            <div>Working hours:</div>
+            <div class="pt-2">Mon-Fri: 9am - 9:30pm</div>
+            <div>Sat: 9am - 7:30pm</div>
+          </div>
+        </div>
+        <form class="mt-3 flex gap-2">
+          <button
+            type="submit"
+            class="text-lg md:text-xl cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+          >
+            Book Appointment Now
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <main
+      class="mx-auto px-2 mt-14 max-w-screen-lg text-zinc-900 dark:text-zinc-200"
+    >
+      <article id="services" class="mt-14">
+        <h2>
           <span
             class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
             >Services</span
           >
         </h2>
         <p class="my-4">List of services and prices</p>
-
-        <h2 id="gallery" class="mt-14">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barbershop-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Signature Reflect Haircut</div>
+            <div class="pt-2">30 min for $38</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barber-chair-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Reflect Package</div>
+            <div class="pt-2">(incl. haircut, beardtrim and shampoo)</div>
+            <div class="pt-2">60 min for $60</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-beard-trimmer-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Skin Fade</div>
+            <div class="pt-2">45 min for $45</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barber-scissors-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Long Layers</div>
+            <div class="pt-2">45 min for $45+</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-afro-pick-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Buzz Haircut with Single Guard</div>
+            <div class="pt-2">30 min for $31</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-man-combing-hair-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Kids Haircut</div>
+            <div class="pt-2">(age 12 and under)</div>
+            <div class="pt-2">30 min for $31</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barber-clippers-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Edge Up</div>
+            <div class="pt-2">15 min for $15</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-shampoo-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Hot Towel Shampoo</div>
+            <div class="pt-2">15 min for $8</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-beard-trimmer-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Beard Trim</div>
+            <div class="pt-2">15 min for $18</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-straight-razor-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Detailed Beard Trim</div>
+            <div class="pt-2">30 min for $22</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-eyebrow-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Eyebrow Waxing</div>
+            <div class="pt-2">15 min for $12</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-ear-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Ears Waxing</div>
+            <div class="pt-2">15 min for $12</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-nose-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Nose Waxing</div>
+            <div class="pt-2">15 min for $12</div>
+          </div>
+        </div>
+      </article>
+      <article id="gallery" class="mt-14">
+        <h2>
           <span
             class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
             >Gallery</span
@@ -265,7 +402,7 @@
             <i class="fas fa-angle-right"></i>
           </div>
         </div>
-      </div>
+      </article>
     </main>
   </body>
 </html>

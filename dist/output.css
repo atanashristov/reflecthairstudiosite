@@ -693,6 +693,10 @@ h6{
   display: flex;
 }
 
+.grid{
+  display: grid;
+}
+
 .hidden{
   display: none;
 }
@@ -705,12 +709,16 @@ h6{
   height: 20rem;
 }
 
-.h-\[calc\(100vh-200px\)\]{
-  height: calc(100vh - 200px);
+.h-\[50px\]{
+  height: 50px;
 }
 
-.min-h-\[400px\]{
-  min-height: 400px;
+.h-\[calc\(100vh-300px\)\]{
+  height: calc(100vh - 300px);
+}
+
+.min-h-\[300px\]{
+  min-height: 300px;
 }
 
 .w-8{
@@ -743,6 +751,10 @@ h6{
 
 .snap-center{
   scroll-snap-align: center;
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -803,6 +815,10 @@ h6{
   background-color: rgb(228 228 231 / var(--tw-bg-opacity));
 }
 
+.bg-\[url\(\'\.\.\/assets\/images\/hero\.jpg\'\)\]{
+  background-image: url('../assets/images/hero.jpg');
+}
+
 .bg-gradient-to-r{
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -827,6 +843,10 @@ h6{
   background-size: cover;
 }
 
+.bg-fixed{
+  background-attachment: fixed;
+}
+
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
@@ -836,12 +856,20 @@ h6{
   background-position: center;
 }
 
-.bg-right-bottom{
-  background-position: right bottom;
+.bg-right{
+  background-position: right;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .p-2{
   padding: 0.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
 }
 
 .px-2{
@@ -873,6 +901,10 @@ h6{
 
 .pt-2{
   padding-top: 0.5rem;
+}
+
+.pt-4{
+  padding-top: 1rem;
 }
 
 .text-center{
@@ -1016,8 +1048,16 @@ h6{
     display: none;
   }
 
+  .md\:h-\[calc\(100vh-200px\)\]{
+    height: calc(100vh - 200px);
+  }
+
   .md\:min-w-\[40\%\]{
     min-width: 40%;
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .md\:text-3xl{
