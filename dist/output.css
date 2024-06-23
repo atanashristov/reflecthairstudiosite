@@ -753,6 +753,10 @@ h6{
   scroll-snap-align: center;
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -806,6 +810,16 @@ h6{
   background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
+.bg-sky-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 89 133 / var(--tw-bg-opacity));
+}
+
+.bg-sky-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(12 74 110 / var(--tw-bg-opacity));
+}
+
 .bg-white\/30{
   background-color: rgb(255 255 255 / 0.3);
 }
@@ -843,10 +857,6 @@ h6{
   background-size: cover;
 }
 
-.bg-fixed{
-  background-attachment: fixed;
-}
-
 .bg-clip-text{
   -webkit-background-clip: text;
           background-clip: text;
@@ -877,6 +887,11 @@ h6{
   padding-right: 0.5rem;
 }
 
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
@@ -887,6 +902,10 @@ h6{
   padding-bottom: 0.5rem;
 }
 
+.pb-10{
+  padding-bottom: 2.5rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -895,8 +914,16 @@ h6{
   padding-left: 0.5rem;
 }
 
+.pl-6{
+  padding-left: 1.5rem;
+}
+
 .pr-4{
   padding-right: 1rem;
+}
+
+.pt-1{
+  padding-top: 0.25rem;
 }
 
 .pt-2{
@@ -905,6 +932,26 @@ h6{
 
 .pt-4{
   padding-top: 1rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
+}
+
+.pl-3{
+  padding-left: 0.75rem;
+}
+
+.pl-4{
+  padding-left: 1rem;
+}
+
+.pt-3{
+  padding-top: 0.75rem;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -931,8 +978,22 @@ h6{
   line-height: 1.75rem;
 }
 
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-bold{
   font-weight: 700;
+}
+
+.font-semibold{
+  font-weight: 600;
 }
 
 .text-black{
@@ -952,6 +1013,11 @@ h6{
 .text-zinc-200{
   --tw-text-opacity: 1;
   color: rgb(228 228 231 / var(--tw-text-opacity));
+}
+
+.text-zinc-400{
+  --tw-text-opacity: 1;
+  color: rgb(161 161 170 / var(--tw-text-opacity));
 }
 
 .text-zinc-900{
@@ -1058,6 +1124,10 @@ h6{
 
   .md\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:bg-fixed{
+    background-attachment: fixed;
   }
 
   .md\:text-3xl{
