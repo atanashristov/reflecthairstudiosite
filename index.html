@@ -29,7 +29,7 @@
       content="R|H: Reflect Hair Studio LLC"
     />
     <meta name="robots" content="index, follow" />
-    <link href="./dist/output.css?1719097408429" rel="stylesheet" />
+    <link href="./dist/output.css?1720386644389" rel="stylesheet" />
     <script defer src="./assets/fontawesome/js/solid.min.js"></script>
     <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
     <script>
@@ -114,6 +114,11 @@
               <span>Gallery</span>
             </div>
           </a>
+          <a href="#about"
+            ><div class="menu-item">
+              <span>About Me</span>
+            </div>
+          </a>
           <a href="#contact"
             ><div class="menu-item">
               <span>Contact</span>
@@ -146,6 +151,11 @@
         <a href="#contact"
           ><div class="menu-item">
             <span>Contact</span>
+          </div>
+        </a>
+        <a href="#about"
+          ><div class="menu-item">
+            <span>About Me</span>
           </div>
         </a>
         <a
@@ -190,10 +200,8 @@
       </div>
     </header>
 
-    <main
-      class="mx-auto px-2 mt-14 max-w-screen-lg text-zinc-900 dark:text-zinc-200"
-    >
-      <article id="services" class="mt-14">
+    <main class="mx-auto px-2 max-w-screen-lg text-zinc-900 dark:text-zinc-200">
+      <article id="services" class="pt-14">
         <h2>
           <span
             class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
@@ -337,7 +345,7 @@
           </div>
         </div>
       </article>
-      <article id="gallery" class="mt-14">
+      <article id="gallery" class="pt-14">
         <h2>
           <span
             class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
@@ -358,7 +366,19 @@
           >
             <div class="min-w-[80%] md:min-w-[40%]">
               <div
-                style="background-image: url('./assets/images/gallery/01.png')"
+                style="background-image: url('./assets/images/gallery/20.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/18.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/19.png')"
                 class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
               ></div>
             </div>
@@ -452,6 +472,12 @@
                 class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
               ></div>
             </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/01.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
           </div>
           <div
             id="next"
@@ -461,13 +487,57 @@
           </div>
         </div>
       </article>
+      <article id="about" class="pt-14 md:pb-36">
+        <h2>
+          <span
+            class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
+            >About Me</span
+          >
+        </h2>
+        <p class="my-4">Few words about me</p>
+        <div
+          class="relative container flex flex-col max-w-6xl mx-auto my-6 px-6 text-gray-900 md:flex-row md:px-0"
+        >
+          <img src="./assets/images/about/01.png" alt="about me" />
+
+          <div
+            class="top-48 px-5 py-5 bg-white md:absolute md:left-[400px] md:py-10 md:px-10 md:shadow-2xl"
+          >
+            <h3 class="max-w-lg mt-5 text-center md:mt-0 md:text-left">
+              Rosie Hristova
+            </h3>
+            <h5 class="max-w-lg mt-3 mb-5 text-center md:text-left">
+              Your Stylist
+            </h5>
+            <div class="max-w-md">
+              <p class="pb-1">
+                I am a professional hair stylist with comprehensive experience
+                in various hair cutting technics. It is vital for me to stay
+                educated on today's trends.
+              </p>
+              <p class="pb-1">
+                I view my work as a true form of art and I find pure joy in
+                helping my customers to feel and look their best.
+              </p>
+              <p class="pb-1">
+                I am rated number one hair stylist on Reddit in the area of
+                McKinney.
+              </p>
+              <p class="pb-1">
+                I look forward to helping you reach your hair goals to reflect
+                your life style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
     </main>
 
     <footer
       id="bottom"
-      class="bg-sky-900 text-zinc-200 grid grid-cols-1 md:grid-cols-3 gap-4 mt-14 pt-4 pb-10 px-3"
+      class="bg-sky-900 text-zinc-200 grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 pt-4 pb-10 px-3"
     >
-      <div class="p-3 bg-sky-800 text-left">
+      <section class="p-3 bg-sky-800 text-left">
         <div class="flex">
           <img
             src="./assets/images/logo.svg"
@@ -492,8 +562,8 @@
             Book Appointment Now
           </a>
         </div>
-      </div>
-      <div class="p-3 bg-sky-800 text-left">
+      </section>
+      <section class="p-3 bg-sky-800 text-left">
         <div class="text-lg font-bold">Working hours:</div>
         <div class="flex-1 items-center justify-end">
           <div class="pt-2">Mon-Fri: 8am - 7pm</div>
@@ -512,8 +582,8 @@
             subject to a cancellation fee of 50%. No-show will be charged 100%.
           </p>
         </div>
-      </div>
-      <div id="contact" class="p-3 bg-sky-800 text-left">
+      </section>
+      <section id="contact" class="p-3 bg-sky-800 text-left">
         <div class="text-lg font-bold">Contact</div>
         <div class="flex-1 items-center justify-end">
           <div class="pt-2">
@@ -546,7 +616,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </footer>
   </body>
 </html>
