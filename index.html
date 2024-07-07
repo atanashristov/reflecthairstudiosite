@@ -1,74 +1,622 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
   <head>
-    <style>
-      /* Set height to 100% for body and html to enable the background image to cover the whole page: */
-      body,
-      html {
-        height: 100%;
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0ZG5L20S2B"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
+      gtag('js', new Date());
 
-      .bgimg {
-        /* Background image */
-        background-image: url('./images/hairdresser-does-hairstyle-her-client.jpg');
-        /* Full-screen */
-        height: 100%;
-        /* Center the background image */
-        background-position: center;
-        /* Scale and zoom in the image */
-        background-size: cover;
-        /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
-        position: relative;
-        /* Add a white text color to all elements inside the .bgimg container */
-        color: white;
-        /* Add a font */
-        font-family: 'Courier New', Courier, monospace;
-        /* Set the font-size to 25 pixels */
-        font-size: 25px;
-      }
+      gtag('config', 'G-0ZG5L20S2B');
+    </script>
 
-      /* Position text in the top-left corner */
-      .topleft {
-        position: absolute;
-        top: 0;
-        left: 16px;
-      }
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>R|H: Reflect Hair Studio LLC</title>
+    <meta name="description" content="R|H: Reflect Hair Studio LLC" />
+    <meta
+      name="og:title"
+      property="og:title"
+      content="R|H: Reflect Hair Studio LLC"
+    />
+    <meta name="robots" content="index, follow" />
+    <link href="./dist/output.css?1720386644389" rel="stylesheet" />
+    <script defer src="./assets/fontawesome/js/solid.min.js"></script>
+    <script defer src="./assets/fontawesome/js/fontawesome.min.js"></script>
+    <script>
+      window.onload = () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+          function toggleMenu() {
+            if (mobileMenuButton.classList.contains('open')) {
+              mobileMenuButton.classList.remove('open');
+            } else {
+              mobileMenuButton.classList.add('open');
+            }
+          }
+          mobileMenuButton.addEventListener('click', () => {
+            toggleMenu();
+          });
 
-      /* Position text in the bottom-left corner */
-      .bottomleft {
-        position: absolute;
-        bottom: 0;
-        left: 16px;
-      }
+          const menuItems = document.getElementsByClassName('menu-item');
+          for (let i = 0; i < menuItems.length; i++) {
+            menuItems.item(i).addEventListener('click', () => {
+              toggleMenu();
+            });
+          }
+        }
 
-      /* Position text in the middle */
-      .middle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-      }
-
-      /* Style the <hr> element */
-      hr {
-        margin: auto;
-        width: 40%;
-      }
-    </style>
+        const previousButton = document.getElementById('previous');
+        const nextButton = document.getElementById('next');
+        const carousel = document.getElementById('carousel');
+        previousButton.addEventListener('click', () => {
+          const itemWidth = carousel.getElementsByTagName('div')[0].clientWidth;
+          carousel.scrollLeft = carousel.scrollLeft - itemWidth;
+        });
+        nextButton.addEventListener('click', () => {
+          const itemWidth = carousel.getElementsByTagName('div')[0].clientWidth;
+          carousel.scrollLeft = carousel.scrollLeft + itemWidth;
+        });
+      };
+    </script>
   </head>
-  <body>
-    <div class="bgimg">
-      <div class="topleft">
-        <!-- <p>Logo</p> -->
+  <body class="bg-zinc-200">
+    <nav
+      class="z-10 sticky top-0 flex bg-gradient-to-r from-rose-500 to-pink-500"
+    >
+      <div class="flex items-center gap-2 p-2">
+        <img
+          src="./assets/images/logo.svg"
+          alt="logo"
+          width="40"
+          class="filter-text-sky-800"
+        />
+        <div class="pl-2 text-3xl font-bold">
+          R|H<span class="pl-2 text-sky-800">Studio</span>
+        </div>
       </div>
-      <div class="middle">
-        <h1>COMING SOON</h1>
-        <!-- <hr /> -->
-        <!-- <p>35 days</p> -->
+      <div class="my-auto ml-auto block cursor-pointer pr-4 md:hidden">
+        <button id="mobile-menu-button" class="group peer">
+          <div
+            class="relative top-0 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:top-2 group-open:rotate-45"
+          ></div>
+          <div
+            class="mt-1 h-1 w-8 rounded-full bg-zinc-200 opacity-100 transition-all group-open:opacity-0"
+          ></div>
+          <div
+            class="relative top-0 mt-1 h-1 w-8 rounded-full bg-zinc-200 transition-all group-open:-top-2 group-open:-rotate-45"
+          ></div>
+        </button>
+        <div
+          class="absolute top-14 left-0 hidden w-full bg-gradient-to-r from-rose-500 to-pink-500 peer-open:block"
+        >
+          <a href="#"
+            ><div class="menu-item">
+              <span>Home</span>
+            </div>
+          </a>
+          <a href="#services"
+            ><div class="menu-item">
+              <span>Services</span>
+            </div>
+          </a>
+          <a href="#gallery"
+            ><div class="menu-item">
+              <span>Gallery</span>
+            </div>
+          </a>
+          <a href="#about"
+            ><div class="menu-item">
+              <span>About Me</span>
+            </div>
+          </a>
+          <a href="#contact"
+            ><div class="menu-item">
+              <span>Contact</span>
+            </div>
+          </a>
+          <a
+            target="_blank"
+            href="https://squareup.com/appointments/book/ra764ckqngcqms/LBR6NK10M4FGF/start"
+            rel="nofollow"
+            ><div class="menu-item">Book Appointment</div>
+          </a>
+        </div>
       </div>
-      <div class="bottomleft">
-        <p>www.reflecthairstudio.com</p>
+      <div class="hidden flex-1 items-center justify-end md:flex">
+        <a href="#"
+          ><div class="menu-item">
+            <span>Home</span>
+          </div>
+        </a>
+        <a href="#services"
+          ><div class="menu-item">
+            <span>Services</span>
+          </div>
+        </a>
+        <a href="#gallery"
+          ><div class="menu-item">
+            <span>Gallery</span>
+          </div>
+        </a>
+        <a href="#contact"
+          ><div class="menu-item">
+            <span>Contact</span>
+          </div>
+        </a>
+        <a href="#about"
+          ><div class="menu-item">
+            <span>About Me</span>
+          </div>
+        </a>
+        <a
+          target="_blank"
+          href="https://squareup.com/appointments/book/ra764ckqngcqms/LBR6NK10M4FGF/start"
+          rel="nofollow"
+          ><div class="menu-item">Book Appointment</div>
+        </a>
       </div>
-    </div>
+    </nav>
+
+    <header class="text-zinc-200">
+      <div
+        id="home"
+        class="bg-[url('../assets/images/hero.jpg')] flex h-[calc(100vh-300px)] md:h-[calc(100vh-200px)] min-h-[300px] flex-col items-center justify-center bg-no-repeat bg-cover bg-right md:bg-fixed"
+      >
+        <div
+          class="rounded-xl bg-white/30 py-2 px-4 text-center backdrop-blur-md"
+        >
+          <div class="flex gap-2">
+            <div class="text-2xl md:text-3xl font-bold text-sky-800">
+              Reflect Hair Studio LLC
+            </div>
+          </div>
+          <div class="text-lg mt-3 font-bold text-black">
+            <div>Working hours:</div>
+            <div class="pt-2">Mon-Fri: 8am - 7pm</div>
+            <div>Sat: 8am - 5pm</div>
+            <div>Sun: 8am - 4pm</div>
+          </div>
+        </div>
+        <div class="mt-3 flex gap-2">
+          <a
+            target="_blank"
+            href="https://squareup.com/appointments/book/ra764ckqngcqms/LBR6NK10M4FGF/start"
+            rel="nofollow"
+            class="text-lg md:text-xl cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+          >
+            Book Appointment Now
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="mx-auto px-2 max-w-screen-lg text-zinc-900 dark:text-zinc-200">
+      <article id="services" class="pt-14">
+        <h2>
+          <span
+            class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
+            >Services</span
+          >
+        </h2>
+        <p class="my-4">List of services and prices</p>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barbershop-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Signature Reflect Haircut</div>
+            <div class="pt-2">$38 / 30 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-beard-trimmer-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Skin Fade</div>
+            <div class="pt-2">$45 / 45 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barber-chair-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Reflect Package</div>
+            <div class="pt-2">(incl. haircut, beard trim and shampoo)</div>
+            <div class="pt-2">$60 /60 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-man-combing-hair-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Kids Haircut</div>
+            <div class="pt-2">(age 12 and under)</div>
+            <div class="pt-2">$31 / 30 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-afro-pick-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Buzz Haircut with Single Guard</div>
+            <div class="pt-2">$31 / 30 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barber-scissors-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Long Layers</div>
+            <div class="pt-2">$45+ / 45 min</div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-barber-clippers-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Edge Up</div>
+            <div class="pt-2">$15 / 15 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-beard-trimmer-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Beard Trim</div>
+            <div class="pt-2">$18 / 15 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-straight-razor-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Detailed Beard Trim</div>
+            <div class="pt-2">$22 / 30 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-shampoo-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Hot Towel Shampoo</div>
+            <div class="pt-2">$8 / 15 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-eyebrow-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Eyebrow Waxing</div>
+            <div class="pt-2">$12 / 15 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-ear-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Ears Waxing</div>
+            <div class="pt-2">$12 / 15 min</div>
+          </div>
+          <div class="p-3 rounded-xl bg-white/30 text-center">
+            <div
+              style="
+                background-image: url('../assets/images/icons/icons8-nose-50.png');
+              "
+              class="h-[50px] bg-center bg-no-repeat"
+            ></div>
+            <div class="pt-4">Nose Waxing</div>
+            <div class="pt-2">$12 / 15 min</div>
+          </div>
+        </div>
+      </article>
+      <article id="gallery" class="pt-14">
+        <h2>
+          <span
+            class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
+            >Gallery</span
+          >
+        </h2>
+        <p class="my-4">Experience some of my work</p>
+        <div class="flex">
+          <div
+            id="previous"
+            class="relative -top-8 flex cursor-pointer items-center justify-center p-2 text-5xl"
+          >
+            <i class="fas fa-angle-left"></i>
+          </div>
+          <div
+            id="carousel"
+            class="mt-4 flex w-full flex-1 snap-x gap-4 overflow-x-auto scroll-smooth pb-5"
+          >
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/20.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/18.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/19.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/02.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/03.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/04.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/05.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/06.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/07.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/08.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/09.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/10.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/12.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/13.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/14.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/15.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/16.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/17.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+            <div class="min-w-[80%] md:min-w-[40%]">
+              <div
+                style="background-image: url('./assets/images/gallery/01.png')"
+                class="h-80 w-full snap-center rounded-xl bg-cover bg-center shadow-md shadow-black/20"
+              ></div>
+            </div>
+          </div>
+          <div
+            id="next"
+            class="relative -top-8 flex cursor-pointer items-center justify-center p-2 text-5xl"
+          >
+            <i class="fas fa-angle-right"></i>
+          </div>
+        </div>
+      </article>
+      <article id="about" class="pt-14 md:pb-36">
+        <h2>
+          <span
+            class="bg-gradient-to-r from-cyan-500 to-pink-500 bg-clip-text text-transparent"
+            >About Me</span
+          >
+        </h2>
+        <p class="my-4">Few words about me</p>
+        <div
+          class="relative container flex flex-col max-w-6xl mx-auto my-6 px-6 text-gray-900 md:flex-row md:px-0"
+        >
+          <img src="./assets/images/about/01.png" alt="about me" />
+
+          <div
+            class="top-48 px-5 py-5 bg-white md:absolute md:left-[400px] md:py-10 md:px-10 md:shadow-2xl"
+          >
+            <h3 class="max-w-lg mt-5 text-center md:mt-0 md:text-left">
+              Rosie Hristova
+            </h3>
+            <h5 class="max-w-lg mt-3 mb-5 text-center md:text-left">
+              Your Stylist
+            </h5>
+            <div class="max-w-md">
+              <p class="pb-1">
+                I am a professional hair stylist with comprehensive experience
+                in various hair cutting technics. It is vital for me to stay
+                educated on today's trends.
+              </p>
+              <p class="pb-1">
+                I view my work as a true form of art and I find pure joy in
+                helping my customers to feel and look their best.
+              </p>
+              <p class="pb-1">
+                I am rated number one hair stylist on Reddit in the area of
+                McKinney.
+              </p>
+              <p class="pb-1">
+                I look forward to helping you reach your hair goals to reflect
+                your life style.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+
+    <footer
+      id="bottom"
+      class="bg-sky-900 text-zinc-200 grid grid-cols-1 md:grid-cols-3 gap-4 mt-16 pt-4 pb-10 px-3"
+    >
+      <section class="p-3 bg-sky-800 text-left">
+        <div class="flex">
+          <img
+            src="./assets/images/logo.svg"
+            alt="logo"
+            width="30"
+            class="filter-text-rose-500"
+          />
+          <div class="pl-6 text-2xl font-bold">
+            R|H<span class="pl-2 text-zinc-400">Studio</span>
+          </div>
+        </div>
+        <div class="pt-4 text-lg font-bold">Reflect Hair Studio LLC</div>
+        <div class="pt-1">reflect on your style</div>
+
+        <div class="mt-3 flex gap-2">
+          <a
+            target="_blank"
+            href="https://squareup.com/appointments/book/ra764ckqngcqms/LBR6NK10M4FGF/start"
+            rel="nofollow"
+            class="text-lg md:text-xl cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-900 hover:shadow-lg hover:shadow-black/20"
+          >
+            Book Appointment Now
+          </a>
+        </div>
+      </section>
+      <section class="p-3 bg-sky-800 text-left">
+        <div class="text-lg font-bold">Working hours:</div>
+        <div class="flex-1 items-center justify-end">
+          <div class="pt-2">Mon-Fri: 8am - 7pm</div>
+          <div>Sat: 8am - 5pm</div>
+          <div>Sun: 8am - 4pm</div>
+          <div class="pt-1 text-sm">
+            Appointments outside hours
+            <p>are available by request.</p>
+          </div>
+        </div>
+        <div class="pt-6 text font-bold">Cancellation policy:</div>
+        <div class="pt-1 text-sm">
+          <p>
+            If you need to cancel your appointment, please let us know 24 hours
+            in advance. Appointments canceled with less than 24 hours are
+            subject to a cancellation fee of 50%. No-show will be charged 100%.
+          </p>
+        </div>
+      </section>
+      <section id="contact" class="p-3 bg-sky-800 text-left">
+        <div class="text-lg font-bold">Contact</div>
+        <div class="flex-1 items-center justify-end">
+          <div class="pt-2">
+            <i class="fa-solid fa-phone"></i>
+            <span class="pl-2"
+              ><a href="tel: +19724647744">(972) 464-7744</a></span
+            >
+          </div>
+          <div class="pt-3">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="pl-2"
+              ><a href="mailto: reflecthairstyle@gmail.com"
+                >reflecthairstyle@gmail.com</a
+              ></span
+            >
+          </div>
+          <div class="pt-3">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="pl-2">
+              4051 South Custer Road
+              <p class="pl-6">McKinney, TX 75070</p>
+              <p class="pl-6">Salons by JC, Room 4</p>
+            </span>
+          </div>
+          <div class="pt-2 text-sm">
+            *&nbsp;&nbsp;The salon suits are located
+            <p class="pl-3">
+              on the <span class="font-semibold">second floor</span> of the
+              building.
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
